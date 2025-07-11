@@ -36,6 +36,7 @@ json_obj = json.dumps(flight_list)
 
 currentpath  = os.getcwd()
 filepath = os.path.join("jsonfiles",f'{flightQueryId}-{supplier}.json')
+os.makedirs('jsonfiles', exist_ok=True)
 
 with open(filepath, mode= 'w', encoding = 'utf-8') as file:
     file.write(json_obj)
